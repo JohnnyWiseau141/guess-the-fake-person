@@ -57,8 +57,10 @@ function checkChoice(choice) {
         console.log(convertedString)
         //ERROR
         console.log("NO NUMBERS ALLOWED")
-        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
+        
     } 
+    daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
+    renderMyStuff()
 }
 
 function renderError(error) {
@@ -66,7 +68,14 @@ function renderError(error) {
 }
 
 function renderMyStuff() {
-    // const lastChoice = 
+    const lastChoice = daUsersChoiceList[daUsersChoiceList.length - 1]
+    const div = document.createElement('div')
+    div.innerText = lastChoice
+
+    if (daUsersChoiceList.length === 1) {
+        prevChoicesAnnouncement.innerText = 'Your previous choices:'
+        // resetBtn.removeAttribute('hidden')
+    }
 }
 
 
