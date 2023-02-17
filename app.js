@@ -11,7 +11,7 @@ const choiceInput = document.querySelector("#da-guessed-guess")
 const daFeatChoice = document.querySelector("#feat-choice")
 const daAnnoucement = document.querySelector("#message")
 const resetButton = document.querySelector("#reset-button")
-const prevChoicesAnnouncement = document.querySelector("#prev-choices-msg")
+const prevChoicesAnnouncement = document.querySelector("#prev-choice-msg")
 
 
 
@@ -35,7 +35,8 @@ function handleDaClicker(evt) {
 
 
 function checkChoice(choice) {
-
+    
+    const unconvertedString = choice
     convertedString = parseInt(choice)
 
     if (choice === secretChoiceList[0]
@@ -46,14 +47,17 @@ function checkChoice(choice) {
         console.log(typeof choice)
         console.log("congragulations you won the mile!")
         console.log(choice)
+        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     } else if (isNaN(convertedString)) {
         console.log(typeof choice)
         console.log("whatever you put in was WRONG. try again")
+        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     } else if (typeof convertedString === "number") {
         console.log(typeof convertedString)
         console.log(convertedString)
         //ERROR
         console.log("NO NUMBERS ALLOWED")
+        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     } 
 }
 
@@ -62,7 +66,7 @@ function renderError(error) {
 }
 
 function renderMyStuff() {
-
+    // const lastChoice = 
 }
 
 
@@ -84,7 +88,7 @@ function initialize() {
     //make sure the user does not have a selected character
     correctChoice = false
     console.log(secretChoiceList)
-    renderError()
+    renderMyStuff()
 }
 
 
