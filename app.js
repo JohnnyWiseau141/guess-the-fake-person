@@ -8,7 +8,7 @@ let secretChoiceList, correctChoice, daUsersChoiceList, convertedString
 
 const form = document.querySelector("form")
 const choiceInput = document.querySelector("#da-guessed-guess")
-const daPrevChoices = document.querySelector("#prev-choices")
+const daFeatChoice = document.querySelector("#feat-choice")
 const daAnnoucement = document.querySelector("#message")
 const resetButton = document.querySelector("#reset-button")
 const prevChoicesAnnouncement = document.querySelector("#prev-choices-msg")
@@ -57,12 +57,20 @@ function checkChoice(choice) {
     } 
 }
 
+function renderError(error) {
+
+}
+
+function renderMyStuff() {
+
+}
+
 
 
 
 function initialize() {
     // remove charas from choice list
-    daPrevChoices.innerText = ""
+    daFeatChoice.innerHTML = ""
     // reset da starting announcement message
     daAnnoucement.innerText = "enter some genshin rando's name"
     // hide the reset button
@@ -75,7 +83,8 @@ function initialize() {
     daUsersChoiceList = []
     //make sure the user does not have a selected character
     correctChoice = false
-
+    console.log(secretChoiceList)
+    renderError()
 }
 
 
