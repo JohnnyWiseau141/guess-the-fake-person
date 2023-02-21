@@ -35,9 +35,11 @@ function handleDaClicker(evt) {
 
 
 function checkChoice(choice) {
+    console.log("check choice function operating...")
     
-    const unconvertedString = choice
     convertedString = parseInt(choice)
+    const unconvertedString = choice
+     
 
     if (choice === secretChoiceList[0]
         || choice === secretChoiceList[1]
@@ -48,13 +50,13 @@ function checkChoice(choice) {
         console.log("congragulations you won the mile!")
         console.log(choice)
         daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-    } else if (isNaN(convertedString)) {
-        console.log(typeof choice)
+        correctChoice = true
+    } else if (!isNaN(convertedString)) {
+        console.log(typeof convertedString)
         console.log("whatever you put in was WRONG. try again")
-        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-    } else {
+        return
+    } 
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-    }
     renderMyStuff() 
     
 }
