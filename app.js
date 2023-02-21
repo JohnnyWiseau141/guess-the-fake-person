@@ -52,15 +52,11 @@ function checkChoice(choice) {
         console.log(typeof choice)
         console.log("whatever you put in was WRONG. try again")
         daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-    } else if (typeof convertedString === "number") {
-        console.log(typeof convertedString)
-        console.log(convertedString)
-        //ERROR
-        console.log("NO NUMBERS ALLOWED")
-        
-    } 
+    } else {
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-    renderMyStuff()
+    }
+    renderMyStuff() 
+    
 }
 
 function renderError(error) {
@@ -71,10 +67,12 @@ function renderMyStuff() {
     const lastChoice = daUsersChoiceList[daUsersChoiceList.length - 1]
     const div = document.createElement('div')
     div.innerText = lastChoice
+    console.log("renderMyStuff() function is working")
 
     if (daUsersChoiceList.length === 1) {
         prevChoicesAnnouncement.innerText = 'Your previous choices:'
-        // resetBtn.removeAttribute('hidden')
+        resetButton.removeAttribute('hidden')
+        console.log("remove reset button hidden attribute")
     }
 }
 
