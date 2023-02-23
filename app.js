@@ -70,7 +70,7 @@ function renderError(error) {
 }
 
 function renderChoice(div, daFeatChoice) {
-
+    console.log("renderChoice function invokes now")
 }
 
 function renderMyStuff() {
@@ -94,7 +94,7 @@ function renderMyStuff() {
 }
 
 function renderCorrectChoice(div) {
-
+    console.log("renderCorrectChoice function go invokey like genshin tcg")
 }
 
 
@@ -113,6 +113,6 @@ function initialize() {
     daUsersChoiceList = []
     //make sure the user does not have a selected character
     correctChoice = false
-    console.log(secretChoiceList)
+    console.log("initialize function go whoosh"+secretChoiceList)
     renderMyStuff()
 }
