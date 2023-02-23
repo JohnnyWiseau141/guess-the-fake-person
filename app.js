@@ -47,12 +47,12 @@ function checkChoice(choice) {
         console.log("congragulations you won the mile!")
         console.log(choice)
         // correctChoice = true
-        
-    } else if (!isNaN(convertedString)) {
-        console.log(typeof convertedString)
-        console.log("whatever you put in was WRONG. try again")
-        return
-    } 
+        } else if (!isNaN(convertedString)) {
+            console.log(typeof convertedString)
+            console.log("whatever you put in was WRONG. try again")
+            console.log("now return code goes oooooo")
+            return
+        } 
     }
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     renderMyStuff() 
@@ -60,23 +60,38 @@ function checkChoice(choice) {
 }
 
 function renderError(error) {
+    console.log("error sane checky decky")
+    daAnnoucement.className = "error"
+    daAnnoucement.innerText = error
+}
 
+function renderChoice(div, daFeatChoice) {
+    
 }
 
 function renderMyStuff() {
     const lastChoice = daUsersChoiceList[daUsersChoiceList.length - 1]
     const div = document.createElement('div')
     div.innerText = lastChoice
-    console.log("renderMyStuff() function is working")
+    console.log("renderMyStuff() is working cause it just happened")
 
     if (daUsersChoiceList.length === 1) {
         prevChoicesAnnouncement.innerText = 'Your previous choices:'
         resetButton.removeAttribute('hidden')
         console.log("remove reset button hidden attribute")
     }
+
+    if (correctChoice) {
+        renderCorrectChoice(div)
+    } else {
+        renderChoice(div, daFeatChoice)
+    }
+
 }
 
+function renderCorrectChoice(div) {
 
+}
 
 
 function initialize() {
