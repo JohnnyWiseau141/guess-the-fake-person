@@ -40,22 +40,20 @@ function checkChoice(choice) {
     convertedString = parseInt(choice)
     const unconvertedString = choice
      
-
-    if (choice === secretChoiceList[0]
-        || choice === secretChoiceList[1]
-        || choice === secretChoiceList[2]
-        || choice === secretChoiceList[3]
-        || choice === secretChoiceList[4]) {
+    for (let i = 0; i < secretChoiceList.length; i++) {     
+        
+        if (choice === secretChoiceList[i]) {
         console.log(typeof choice)
         console.log("congragulations you won the mile!")
         console.log(choice)
-        daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
-        correctChoice = true
+        // correctChoice = true
+        
     } else if (!isNaN(convertedString)) {
         console.log(typeof convertedString)
         console.log("whatever you put in was WRONG. try again")
         return
     } 
+    }
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     renderMyStuff() 
     
