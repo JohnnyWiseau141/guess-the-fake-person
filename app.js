@@ -50,12 +50,15 @@ function checkChoice(choice) {
             console.log("congragulations you won the mile!")
             console.log(choice)
             // correctChoice = true
+            daAnnoucement.innerText = "You made a correct choice! Your details will be generated coming soon..."
+            daAnnoucement.className = "victory"
             console.log("break goes break")
             break
         } else if (!isNaN(convertedString)) {
             console.log(typeof convertedString)
             console.log("whatever you put in was WRONG. try again")
             console.log("now return goes ooo stop function and return the value")
+            renderError("you chose a number. bruh. pick again")
             return
         } 
     }
@@ -68,13 +71,13 @@ function checkChoice(choice) {
 }
 
 function renderError(error) {
-    console.log("sane error checky decky")
-    daAnnoucement.className = "error"
+    console.log("renderError sanity check")
     daAnnoucement.innerText = error
+    daAnnoucement.className = 'error'
 }
 
-function renderChoice(div, daFeatChoice) {
-    console.log("renderChoice function invokes now")
+function renderChoice(div, lastChoice) {
+    console.log("renderChoice function is working now")
 }
 
 function renderMyStuff() {
@@ -92,13 +95,13 @@ function renderMyStuff() {
     if (correctChoice) {
         renderCorrectChoice(div)
     } else {
-        renderChoice(div, daFeatChoice)
+        renderChoice(div, lastChoice)
     }
 
 }
 
 function renderCorrectChoice(div) {
-    console.log("renderCorrectChoice function go invokey like genshin tcg")
+    console.log("renderCorrectChoice function works like genshin tcg")
 }
 
 
