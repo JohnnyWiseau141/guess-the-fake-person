@@ -55,7 +55,7 @@ function checkChoice(choice) {
         } else if (!isNaN(convertedString)) {
             console.log(typeof convertedString)
             console.log("whatever you put in was WRONG. try again")
-            console.log("now return goes oooooo")
+            console.log("now return goes ooo stop function and return the value")
             return
         } 
     }
