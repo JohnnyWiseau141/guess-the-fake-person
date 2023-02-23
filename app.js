@@ -39,6 +39,8 @@ function checkChoice(choice) {
     
     convertedString = parseInt(choice)
     const unconvertedString = choice
+    console.log("before:")
+    console.log(daUsersChoiceList)
      
     for (let i = 0; i < secretChoiceList.length; i++) {     
         
@@ -53,12 +55,14 @@ function checkChoice(choice) {
         } else if (!isNaN(convertedString)) {
             console.log(typeof convertedString)
             console.log("whatever you put in was WRONG. try again")
-            console.log("now return code goes oooooo")
+            console.log("now return goes oooooo")
             return
         } 
     }
-    console.log("now the array of choices made gets longer")
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
+    console.log("now the array of choices made gets longer")
+    console.log("after:")
+    console.log(daUsersChoiceList)
     renderMyStuff() 
     
 }
@@ -113,6 +117,7 @@ function initialize() {
     daUsersChoiceList = []
     //make sure the user does not have a selected character
     correctChoice = false
-    console.log("initialize function go whoosh"+secretChoiceList)
+    console.log("initialize function go whoosh")
+    console.log(secretChoiceList)
     renderMyStuff()
 }
