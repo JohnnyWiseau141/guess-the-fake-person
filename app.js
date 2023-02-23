@@ -43,10 +43,13 @@ function checkChoice(choice) {
     for (let i = 0; i < secretChoiceList.length; i++) {     
         
         if (choice === secretChoiceList[i]) {
-        console.log(typeof choice)
-        console.log("congragulations you won the mile!")
-        console.log(choice)
-        // correctChoice = true
+            console.log(secretChoiceList)
+            console.log(typeof choice)
+            console.log("congragulations you won the mile!")
+            console.log(choice)
+            // correctChoice = true
+            console.log("break goes break")
+            break
         } else if (!isNaN(convertedString)) {
             console.log(typeof convertedString)
             console.log("whatever you put in was WRONG. try again")
@@ -54,19 +57,20 @@ function checkChoice(choice) {
             return
         } 
     }
+    console.log("now the array of choices made gets longer")
     daUsersChoiceList[daUsersChoiceList.length] = unconvertedString
     renderMyStuff() 
     
 }
 
 function renderError(error) {
-    console.log("error sane checky decky")
+    console.log("sane error checky decky")
     daAnnoucement.className = "error"
     daAnnoucement.innerText = error
 }
 
 function renderChoice(div, daFeatChoice) {
-    
+
 }
 
 function renderMyStuff() {
@@ -112,7 +116,3 @@ function initialize() {
     console.log(secretChoiceList)
     renderMyStuff()
 }
-
-
-
-
