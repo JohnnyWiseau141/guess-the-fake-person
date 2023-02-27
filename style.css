@@ -5,3 +5,7 @@
 .victory {
     color: green
 }
+
+.incorrect {
+    color: rgb(145, 123, 52)
+}
