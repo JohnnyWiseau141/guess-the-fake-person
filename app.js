@@ -93,8 +93,8 @@ function renderMyStuff() {
     
     const lastChoice = daUsersChoiceList[daUsersChoiceList.length - 1]
     const div = document.createElement('div')
+    console.log("lastChoice variable being assigned to... "+daUsersChoiceList[daUsersChoiceList.length - 1])
     div.innerText = lastChoice
-    
     console.log("renderMyStuff() is working cause it just happened")
 
     if (daUsersChoiceList.length === 1) {
@@ -105,7 +105,7 @@ function renderMyStuff() {
 
     if (correctChoice) {
         renderCorrectChoice(div)
-    } else {
+    } else if (daUsersChoiceList.length > 0) {
         renderChoice(div, lastChoice)
     }
 
