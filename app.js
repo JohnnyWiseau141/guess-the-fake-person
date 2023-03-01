@@ -26,6 +26,7 @@ form.addEventListener("submit", handleDaClicker)
 initialize();
 
 function handleDaClicker(evt) {
+    console.log("handleDaClicker function go whoosh whoosh")
     evt.preventDefault()
     if (correctChoice === false) {
         checkChoice(choiceInput.value)
@@ -120,6 +121,10 @@ function renderCorrectChoice(div) {
         daAnnoucement.innerText = "Congratulations you won the mile in one try! how did what's your secret??"
     } else {
         daAnnoucement.innerText = "Congrats! You chose "+daUsersChoiceList[daUsersChoiceList.length - 1]
+    }
+
+    if (daUsersChoiceList[daUsersChoiceList.length - 1] === "itto") {
+        daFeatChoice.innerHTML = '<object data="itto-inner.html"></object>'
     }
 }
 
