@@ -124,7 +124,7 @@ function renderCorrectChoice(div) {
     }
 
     if (daUsersChoiceList[daUsersChoiceList.length - 1] === "itto") {
-        daFeatChoice.innerHTML = '<object data="itto-inner.html"></object>'
+        daFeatChoice.innerHTML = '<h1>it\'s itto showtime!</h1> <img src="https://genshinmains.com/wp-content/uploads/2021/10/Arataki-Itto.png"></img>'
     }
 }
 
