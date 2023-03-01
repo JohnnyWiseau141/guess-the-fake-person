@@ -125,6 +125,14 @@ function renderCorrectChoice(div) {
 
     if (daUsersChoiceList[daUsersChoiceList.length - 1] === "itto") {
         daFeatChoice.innerHTML = '<h1>it\'s itto showtime!</h1> <img src="https://genshinmains.com/wp-content/uploads/2021/10/Arataki-Itto.png"></img>'
+    } else if (daUsersChoiceList[daUsersChoiceList.length - 1] === "mona") {
+        daFeatChoice.innerHTML = '<h1>Arnold likes to simp for her~</h1> <img src="images/mona_item.png"></img>'
+    } else if (daUsersChoiceList[daUsersChoiceList.length - 1] === "amber") {
+        daFeatChoice.innerHTML = '<h1>Amber is best girl!</h1> <img src="images/amber_item.png"></img>'
+    } else if (daUsersChoiceList[daUsersChoiceList.length - 1] === "eula") {
+        daFeatChoice.innerHTML = '<h1>Mark my words. Vengeance will be mine!</h1> <img src="images/eula_item.png"></img>'
+    } else if (daUsersChoiceList[daUsersChoiceList.length - 1] === "lumine") {
+        daFeatChoice.innerHTML = '<h1>the best traveler!</h1> <img src="images/lumine_item.png"></img>'
     }
 }
 
